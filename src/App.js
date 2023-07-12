@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import receipts from './models/receipts';
+import Receipts from './components/Receipts';
+const state = {
+  receipts
+}
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Receipts ticketInfo={state.receipts[0]}/>
+      <Receipts ticketInfo={state.receipts[1]}/>
+      <Receipts ticketInfo={state.receipts[2]}/>
+
+      
     </div>
   );
 }
